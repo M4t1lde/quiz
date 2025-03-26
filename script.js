@@ -12,6 +12,7 @@ function calculateScore() {
     
     document.getElementById("score").innerText = "Poeng: " + sluttpoeng; //regner sluttscore
     document.getElementById("tryagain").innerText = "Prøv igjen";
+    document.getElementById("boks").style.color = "#ff0000";
 }
 
 function Klikk() {
