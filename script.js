@@ -1,4 +1,6 @@
 
+//Fikk hjelp og forbedrelser av chat.gpt, andre direkte kodelinjer har kilde.
+
 function calculateScore() {
     let sluttpoeng = 0;
     let questions = document.querySelectorAll(".boks");
