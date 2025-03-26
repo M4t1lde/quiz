@@ -11,6 +11,7 @@ function calculateScore() {
     }); //hver ".boks" er +1 index. bare det riktige har en value på 1.
     
     document.getElementById("score").innerText = "Poeng: " + sluttpoeng; //regner sluttscore
+    document.getElementById("tryagain").innerText = "Prøv igjen";
 }
 
 function Klikk() {
