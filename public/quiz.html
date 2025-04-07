@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1 {
+            text-align: center;
+            padding: 40px;
+        }
+        .boks {
+            background-color: rgb(214, 214, 214);
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+        #confirmButton {
+            padding: 10px 100px;
+            background: #444;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+        }
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            margin: 10px auto;
+        }
+        #score {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <a href="../test.html">Gå tilbake</a>
+
+    <div id="quizContainer"></div>
+
+    <input type="button" id="confirmButton" value="Fullfør quiz" onclick="calculateScore()">
+    <a href="quiz.html" id="tryagain"></a>
+    <div id="score"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
