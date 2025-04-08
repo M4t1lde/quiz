@@ -72,7 +72,7 @@ async function calculateScore() {
     document.getElementById("tryagain").innerText = "Prøv igjen";
     window.scrollTo(0, document.body.scrollHeight);
     
-    // Save score to server
+    // lagrer scoren til /api/save-score
     await fetch(`${BASE_URL}/api/save-score`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
