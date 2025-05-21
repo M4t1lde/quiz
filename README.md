@@ -3,14 +3,20 @@
 
 Dette er en enkel kurs nettside med en interaktiv quiz på slutten. Prosjektet er kodet i **HTML**, **CSS** og **JavaScript**, med en **MariaDB**-database koblet til via en **Node.js** backend.
 
+## Funksjonaliteter
+Kursinnhold vises i en enkel og responsiv UI.\
+En quiz med flervalgsspørsmål til slutt.\
+Resultater lagres i databasen.\
+Backend-server håndterer databaseforespørsler og validering.
 ## Teknologier
-node.js\
-mariadb\
-HTML, CSS, JavaScript
+Frontend: HTML, CSS, JavaScript\
+Backend: Node.js (Express)\
+Database: MariaDB\
+Andre verktøy: Homebrew
 
 ## Hvordan installere og kjøre prosjektet lokalt
 
-1. Klon repositoriet
+1. Klon repoen
 ```bash
 git clone https://github.com/M4t1lde/quiz.git
 cd quiz/
@@ -26,7 +32,7 @@ brew install mariadb
 mysql.server start
 brew services start mariadb
 ```
-**Logg inn** som root brukeren
+Logg inn som root brukeren
 ```bash
 sudo mysql -u root
 ```
@@ -42,7 +48,7 @@ USE quiz;
 ```
 placeholder for database setup
 
-Gå inn i filen kalt dbconnector.js i prosjektmappen, og endre "user" og "password" til ditt eget(la passordet være blangt om du ikke har et).
+Åpne filen kalt dbconnector.js i prosjektmappen, og endre "user" og "password" til ditt eget(la passordet være blangt om du ikke har et).
 
 
 ```bash
@@ -54,3 +60,26 @@ const pool = mariadb.createPool({
     connectionLimit: 5
 });
 ```
+
+## Starte serveren
+```bash
+node app.js
+```
+Standardporten er http://localhost:3000
+
+## Teste applikasjonen
+Les kurset.
+
+Ta quizen.
+
+Resultatet ditt lagres i databasen. Se det på /api/scores
+
+## Feilsøking
+Database connection refused: Sjekk at MariaDB kjører.
+
+"Cannot find module 'mariadb'": Kjør npm install mariadb.
+
+Port in use: Endre port i app.js hvis 3000 er opptatt.
+
+## Lisens
+Dette prosjektet er åpent og kan brukes fritt.
