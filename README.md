@@ -28,34 +28,32 @@ git clone https://github.com/M4t1lde/quiz.git
 cd quiz/
 ```
 
-Installer **homebrew** om du ikke har det
+2. Installer **homebrew** om du ikke har det
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-Installer **mariadb**
+3. Installer **mariadb**
 ```bash
 brew install mariadb
 mysql.server start
 brew services start mariadb
 ```
-Logg inn som root brukeren
+4. Logg inn som root brukeren
 ```bash
 sudo mysql -u root
 ```
-Installer nødvendige npm-pakker og MariaDB-klienten for Node.js:
+5. Installer nødvendige npm-pakker og MariaDB-klienten for Node.js:
 ```bash
 npm install
 npm install mariadb
 ```
-Når du er logget inn i MariaDB, kjør følgende kommandoer:
+6. Kjør følgende kommandoer i en ny terminal for å opprette databsen med data:
 ```bash
-CREATE DATABASE quiz;
-USE quiz;
+cd /path/to/file
+sudo mysql -u root < quiz_db.sql
+
 ```
-placeholder for database setup
-
-Åpne filen kalt dbconnector.js i prosjektmappen, og endre "user" og "password" til ditt eget(la passordet være blangt om du ikke har et).
-
+7. Åpne filen kalt dbconnector.js i prosjektmappen, og endre "user" og "password" til ditt eget(la passordet være blangt om du ikke har et).
 
 ```bash
 const pool = mariadb.createPool({
@@ -70,7 +68,7 @@ const pool = mariadb.createPool({
 
 ## Starte serveren
 ```bash
-node app.js
+nodemon app.js
 ```
 Standardporten er http://localhost:3000
 
@@ -88,7 +86,7 @@ Les kurset.
 
 Ta quizen.
 
-Resultatet ditt lagres i databasen. Se det på /api/scores
+Resultatet ditt lagres i databasen. Se det på `/api/scores`
 
 ## Feilsøking
 Database connection refused: Sjekk at MariaDB kjører.
