@@ -1,6 +1,6 @@
 # Kurs nettside med en quiz
-
-
+Målet vårt er å tilby en enkel og interaktiv læringsplattform hvor brukere kan gjennomføre et kort kurs og teste kunnskapen sin med en quiz, med lagring av resultater for videre evaluering.
+### Hvordan systemet funker
 Dette er en enkel kurs nettside med en interaktiv quiz på slutten. Prosjektet er kodet i **HTML**, **CSS** og **JavaScript**, med en **MariaDB**-database koblet til via en **Node.js** backend.
 
 ## Funksjonaliteter
@@ -8,12 +8,18 @@ Kursinnhold vises i en enkel og responsiv UI.\
 En quiz med flervalgsspørsmål til slutt.\
 Resultater lagres i databasen.\
 Backend-server håndterer databaseforespørsler og validering.
+
 ## Teknologier
 Frontend: HTML, CSS, JavaScript\
 Backend: Node.js (Express)\
 Database: MariaDB\
 Andre verktøy: Homebrew
 
+### Forutsettninger, hva du trenger:
+Visual Studio Code(eller annen tekseditor)\
+En terminal\
+Et sted å lagre filer\
+Git
 ## Hvordan installere og kjøre prosjektet lokalt
 
 1. Klon repoen
@@ -61,12 +67,22 @@ const pool = mariadb.createPool({
 });
 ```
 
+
 ## Starte serveren
 ```bash
 node app.js
 ```
 Standardporten er http://localhost:3000
 
+
+## Pushe endringer i git
+Om du gjør endinger kan du pushe de med disse kommandoene i terminalen:
+```bash 
+git add *
+git commit -m "hva_endret_jeg"
+
+git push origin master
+```
 ## Teste applikasjonen
 Les kurset.
 
@@ -81,5 +97,5 @@ Database connection refused: Sjekk at MariaDB kjører.
 
 Port in use: Endre port i app.js hvis 3000 er opptatt.
 
-## Lisens
+### Lisens
 Dette prosjektet er åpent og kan brukes fritt.
